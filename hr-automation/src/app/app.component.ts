@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GithubUsersService } from './components/github-users/github-users.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hr-automation';
+  constructor(private githubUser:GithubUsersService) {}
+  data: any;
+  ngOnInit() {
+  this.githubUser.getUsers().subscribe(res => {
+    console.log(res)
+    })  
+  }
 }
