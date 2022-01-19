@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import githubUsers from '../jsonFolder/users.json';
+import githubUsers from './jsonFolder/users.json';
 
 interface GithubUser {
   login: string;
