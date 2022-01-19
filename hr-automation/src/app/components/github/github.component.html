@@ -1,0 +1,16 @@
+<div class="header">
+    <h1>Github Users</h1>
+</div>
+<div class="main">
+    <ul class="user-list">
+        <li class="user-item" *ngFor="let githubUser of users">
+            <img src={{githubUser.avatar_url}}>
+            <h2>Login: {{githubUser.login}}</h2>
+            <p>GithubId: {{githubUser.id}}</p>
+            <p>Link to Github Page: </p>
+            <p>
+                <a href={{githubUser.html_url}}>{{githubUser.html_url}}</a>
+            </p> 
+        </li>
+    </ul>
+</div>

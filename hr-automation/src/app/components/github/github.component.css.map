@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,UAAU,EAAE,MAAM;CACrB;;AAED,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,SAAS,EAAE,IAAI;CAClB;;AAED,AAAA,EAAE,CAAC;EACC,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,MAAM;EACd,aAAa,EAAE,IAAI;EACnB,eAAe,EAAE,IAAI;CACxB;;AAED,AAAA,GAAG,CAAC;EACA,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,IAAI;CACtB",
+    "sources": [
+        "github.component.scss"
+    ],
+    "names": [],
+    "file": "github.component.css"
+}

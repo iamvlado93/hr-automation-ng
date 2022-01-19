@@ -1,0 +1,22 @@
+.header {
+    text-align: center;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    list-style-type: none;
+}
+
+img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10px;
+}
