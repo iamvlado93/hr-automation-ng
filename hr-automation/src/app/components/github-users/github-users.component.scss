@@ -1,0 +1,76 @@
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 10vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 5vh;
+}
+
+nav input {
+    width: 40%;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 0.3rem 0.3rem;
+  margin: 0.3rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  outline: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+ul {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    list-style-type: none;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+}
+
+ul li:hover {
+    transition: 0.6s ease-in-out;
+    transform: scale(1.05);
+}
+
+ul li h3 {
+    margin: 0;
+}
+
+ul li img {
+    width: 4rem;
+    height: 4rem;
+}
