@@ -6,14 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
-import { NgxPaginationModule } from 'ngx-pagination';
 
-import { GithubUsersComponent } from './components/github-users/github-users.component';
+import { GithubUsersComponent } from './github-users/github-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GithubUsersComponent,
+    GithubUsersComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +21,6 @@ import { GithubUsersComponent } from './components/github-users/github-users.com
     FormsModule,
     Ng2SearchPipeModule,
     Ng2OrderModule,
-    NgxPaginationModule,
 
   ],
   providers: [],

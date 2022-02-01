@@ -1,4 +1,4 @@
-export class GithubUsers {
+export class githubUsers {
     login: string;
     avatar_url: string;
     html_url: string;
