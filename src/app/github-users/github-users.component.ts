@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { githubUsers } from './github-users';
+import { GithubUser } from './github-user';
 import { GithubUsersService } from './github-users.service';
+import { map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-github-users',
@@ -8,40 +9,33 @@ import { GithubUsersService } from './github-users.service';
   styleUrls: ['./github-users.component.scss']
 })
 export class GithubUsersComponent implements OnInit {
-  users: githubUsers[] = [];
-  login: any;
-  constructor(public githubUsers: GithubUsersService) { }
+  users$: Observable<GithubUser[]>;
+  searchString: string = '';
+
+  pageNum: number = 1;
+  pageSize: number = 10;
+
+  constructor(public githubUsers: GithubUsersService) {
+    this.users$ = githubUsers.getUsers();
+  }
 
   ngOnInit() {
-    this.githubUsers.getUsers().subscribe(res => {
-      this.users = res;
-      console.log(res)
-    })
+    this.githubUsers.load(this.pageNum, this.pageSize);
   }
 
   loadMore() {
-      this.githubUsers.getMoreUsers().subscribe(res => {
-        this.users = res;
-        console.log(res)
-    })
-  }
-
-  loadEvenMore() {
-    this.githubUsers.getEvenMoreUsers().subscribe(res => {
-        this.users = res;
-        console.log(res)
-    })
+    this.pageNum += 1;
+    this.githubUsers.load(this.pageNum, this.pageSize);
   }
 
   search() {
-    if (this.login === '') {
-      this.ngOnInit();
-      } else {
-        this.users = this.users.filter(res => {
-          return res.login.toLocaleLowerCase().match(this.login.toLocaleLowerCase());
-      })
+    if (this.searchString && this.searchString !== '') {
+      this.users$ = this.users$.pipe(
+        map((users: GithubUser[]) =>
+          users.filter(u => u.login.toLocaleLowerCase().match(this.searchString.toLocaleLowerCase()))
+        ));
     }
   }
 
-  
+
 }

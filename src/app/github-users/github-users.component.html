@@ -2,21 +2,19 @@
     <h1>Candidates</h1>
 </header>
 <nav>
-    <input type="text" name="searchField" [(ngModel)] = 'login' (ngModelChange)="search()" placeholder="Enter login">
+    <input type="text" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="search()" placeholder="Enter login">
 </nav>
 <section>
     <ul>
-        <li *ngFor="let user of users; let idx = index">
+        <li *ngFor="let user of users$ | async">
             <a href={{user.html_url}}>
                 <img src="{{user.avatar_url}}">
             </a>
             <h3>{{user.login}}</h3>
-            <p>{{idx + 1}}</p>
         </li>
     </ul>
     <div>
         <button (click)="loadMore()">Load More Users</button>
-        <button (click)="loadEvenMore()">Load All Users</button>
     </div>
 </section>
-    
+
