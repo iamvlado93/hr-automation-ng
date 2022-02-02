@@ -29,12 +29,4 @@ export class GithubUsersService {
       this.users$.next(this.users);
     });
   }
-
-  getMoreUsers() {
-    return this.http.get<GithubUser[]>(this.API_URL);
-  }
-
-  getEvenMoreUsers() {
-    return this.http.get<GithubUser[]>(this.API_URL);
-  }
 }
