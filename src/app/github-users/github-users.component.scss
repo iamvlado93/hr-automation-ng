@@ -8,16 +8,42 @@ header h1 {
     color: rgb(255, 255, 255);
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h4 {
     margin: 0;
-    height: 5vh;
 }
 
-nav input {
-    width: 40%;
+.main {
+   display: flex;
+   flex-direction: row;
+   margin: 0 auto;
+   &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 300px;
+    background-color: aquamarine;
+   }
+   &__output {
+    display: flex;
+    flex-direction: column;
+    &__header {
+        background-color: blueviolet;
+        width: 100%;
+        text-align: center;
+    }
+    &__users {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }   
+   }
+}
+
+div input {
+    width: 50%;
     color: rgb(255, 255, 255);
     background-color: transparent;
 }
@@ -32,19 +58,12 @@ input[type=text] {
   outline: none;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-
 ul {
-    width: 65%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
 }
 
 ul li {
@@ -59,6 +78,7 @@ ul li {
     border-radius: 10px;
     font-size: 0.8rem;
     color: rgb(255, 255, 255);
+    background-color: rgba(127, 255, 212, 0.178);
 }
 
 ul li:hover {
@@ -71,8 +91,8 @@ ul li h3 {
 }
 
 ul li img {
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 button {
