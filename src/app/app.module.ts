@@ -9,11 +9,13 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
 
 import { GithubUsersComponent } from './github-users/github-users.component';
 import {CommonModule} from "@angular/common";
+import { FilterPipe } from './Pipes/filter.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
-    GithubUsersComponent
+    GithubUsersComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

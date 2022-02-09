@@ -11,9 +11,9 @@ import { map, Observable} from "rxjs";
 export class GithubUsersComponent implements OnInit {
   users$: Observable<GithubUser[]>;
   searchString: string = '';
-
   pageNum: number = 1;
   pageSize: number = 10;
+  location = '';
 
   constructor(public githubUsers: GithubUsersService) {
     this.users$ = githubUsers.getUsers();

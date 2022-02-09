@@ -1,20 +1,28 @@
-<header>
-    <h1>Candidates</h1>
-</header>
-<nav>
-    <input type="text" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="search()" placeholder="Enter login">
-</nav>
-<section>
-    <ul>
-        <li *ngFor="let user of users$ | async">
-            <a href={{user.html_url}}>
-                <img src="{{user.avatar_url}}">
-            </a>
-            <h3>{{user.login}}</h3>
-        </li>
-    </ul>
-    <div>
-        <button (click)="loadMore()">Load More Users</button>
+<section class="main">
+    <div class="main__nav">
+        <input type="text" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="search()" placeholder="Enter login">
+        <input type="text" placeholder="Enter location" [(ngModel)]="location">
+        <input type="text" placeholder="Enter stack">
+    </div>
+    <div class="main__output">
+        <div class="main__output__header">
+            <h1>Candidates</h1>
+        </div>
+        <div class="main__output__users">
+            <ul>
+                <li *ngFor="let user of users$ | async | filter: location: 'Location'">
+                    <a href={{user.html_url}}>
+                        <img src="{{user.avatar_url}}">
+                    </a>
+                    <h3>{{user.login}}</h3>
+                    <h4>{{user.location}}</h4>
+                    <h4>{{user.stack}}</h4>
+                </li>
+            </ul>
+            <div>
+                <button (click)="loadMore()">Load More Users</button>
+            </div>
+        </div>
     </div>
 </section>
 
