@@ -3,6 +3,7 @@
         <input type="text" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="search()" placeholder="Enter login">
         <input type="text" placeholder="Enter location" [(ngModel)]="location">
         <button (click)="locationFilter()">By Location</button>
+        <button (click)="locationFilterClear()">By Location</button>
         <input type="text" placeholder="Enter stack">
     </div>
     <div class="main__output">

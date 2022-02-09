@@ -41,4 +41,9 @@ export class GithubUsersComponent implements OnInit {
   locationFilter() {
     this.searchLocation = this.location;
   }
+
+  locationFilterClear() {
+    this.searchLocation = '';
+    this.location = '';
+  }
 }
