@@ -2,6 +2,7 @@
     <div class="main__nav">
         <input type="text" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="search()" placeholder="Enter login">
         <input type="text" placeholder="Enter location" [(ngModel)]="location">
+        <button (click)="locationFilter()">By Location</button>
         <input type="text" placeholder="Enter stack">
     </div>
     <div class="main__output">
@@ -10,7 +11,7 @@
         </div>
         <div class="main__output__users">
             <ul>
-                <li *ngFor="let user of users$ | async | filter: location: 'Location'">
+                <li *ngFor="let user of users$ | async | filter: searchLocation: 'Location'">
                     <a href={{user.html_url}}>
                         <img src="{{user.avatar_url}}">
                     </a>

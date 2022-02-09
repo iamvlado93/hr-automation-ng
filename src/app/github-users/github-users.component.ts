@@ -14,6 +14,7 @@ export class GithubUsersComponent implements OnInit {
   pageNum: number = 1;
   pageSize: number = 10;
   location = '';
+  searchLocation: any;
 
   constructor(public githubUsers: GithubUsersService) {
     this.users$ = githubUsers.getUsers();
@@ -37,5 +38,7 @@ export class GithubUsersComponent implements OnInit {
     }
   }
 
-
+  locationFilter() {
+    this.searchLocation = this.location;
+  }
 }
