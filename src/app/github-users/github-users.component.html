@@ -1,18 +1,24 @@
 <section class="main">
-    <div class="main__nav">
-        <input type="text" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="search()" placeholder="Enter login">
-        <input type="text" placeholder="Enter location" [(ngModel)]="location">
-        <button (click)="locationFilter()">By Location</button>
-        <button (click)="locationFilterClear()">By Location</button>
-        <input type="text" placeholder="Enter stack">
+    <div class="main__sidebar">
+        <!-- <input type="text" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="search()" placeholder="Enter login"> -->
+        <h2>User's Form</h2>
+        <form class="filter-form" [formGroup]="filterForm">
+            <label for="login">Login: </label>
+            <input id="login" type="text" formControlName="login">
+            <label for="stack">Stack: </label>
+            <input id="stack" type="text" formControlName="stack">
+            <label for="location">Location: </label>
+            <input id="location" type="text" formControlName="location">
+        </form>
+        <button (click)="loadMore()">Load More Users</button>
     </div>
     <div class="main__output">
         <div class="main__output__header">
-            <h1>Candidates</h1>
+            <h2>Candidates</h2>
         </div>
         <div class="main__output__users">
             <ul>
-                <li *ngFor="let user of users$ | async | filter: searchLocation: 'Location'">
+                <li *ngFor="let user of users$ | async">
                     <a href={{user.html_url}}>
                         <img src="{{user.avatar_url}}">
                     </a>
@@ -22,7 +28,7 @@
                 </li>
             </ul>
             <div>
-                <button (click)="loadMore()">Load More Users</button>
+                
             </div>
         </div>
     </div>

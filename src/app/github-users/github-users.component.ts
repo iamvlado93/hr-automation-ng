@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubUser } from './github-user';
 import { GithubUsersService } from './github-users.service';
+import { FormGroup, FormControl } from '@angular/forms'
 import { map, Observable} from "rxjs";
 
 @Component({
@@ -9,12 +10,15 @@ import { map, Observable} from "rxjs";
   styleUrls: ['./github-users.component.scss']
 })
 export class GithubUsersComponent implements OnInit {
+  filterForm = new FormGroup({
+    login: new FormControl(''),
+    stack: new FormControl(''),
+    location: new FormControl('')
+  });
   users$: Observable<GithubUser[]>;
   searchString: string = '';
   pageNum: number = 1;
   pageSize: number = 10;
-  location = '';
-  searchLocation: any;
 
   constructor(public githubUsers: GithubUsersService) {
     this.users$ = githubUsers.getUsers();
@@ -36,14 +40,5 @@ export class GithubUsersComponent implements OnInit {
           users.filter(u => u.login.toLocaleLowerCase().match(this.searchString.toLocaleLowerCase()))
         ));
     }
-  }
-
-  locationFilter() {
-    this.searchLocation = this.location;
-  }
-
-  locationFilterClear() {
-    this.searchLocation = '';
-    this.location = '';
   }
 }
