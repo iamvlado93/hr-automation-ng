@@ -1,14 +1,11 @@
 <section class="main">
     <div class="main__sidebar">
-        <!-- <input type="text" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="search()" placeholder="Enter login"> -->
         <h2>User's Form</h2>
-        <form class="filter-form" [formGroup]="filterForm">
-            <label for="login">Login: </label>
-            <input id="login" type="text" formControlName="login">
-            <label for="stack">Stack: </label>
-            <input id="stack" type="text" formControlName="stack">
-            <label for="location">Location: </label>
-            <input id="location" type="text" formControlName="location">
+        <form (ngSubmit)="onSubmit()" class="filter-form" [formGroup]="filterForm">
+            <input id="login" name="searchField" [(ngModel)] = 'searchString' (ngModelChange)="searchByLogin()" type="text" formControlName="login" placeholder="Enter login">
+            <input id="stack" type="text" formControlName="stack" placeholder="Enter stack">
+            <input id="location" type="text" formControlName="location" placeholder="Enter location">
+            <button type="submit" [disabled]="!filterForm.valid">Submit</button>
         </form>
         <button (click)="loadMore()">Load More Users</button>
     </div>
@@ -27,9 +24,6 @@
                     <h4>{{user.stack}}</h4>
                 </li>
             </ul>
-            <div>
-                
-            </div>
         </div>
     </div>
 </section>

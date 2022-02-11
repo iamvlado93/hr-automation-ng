@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubUser } from './github-user';
 import { GithubUsersService } from './github-users.service';
-import { FormGroup, FormControl } from '@angular/forms'
+import { FormGroup, FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms'
 import { map, Observable} from "rxjs";
 
 @Component({
@@ -11,10 +12,11 @@ import { map, Observable} from "rxjs";
 })
 export class GithubUsersComponent implements OnInit {
   filterForm = new FormGroup({
-    login: new FormControl(''),
+    login: new FormControl('', Validators.required),
     stack: new FormControl(''),
     location: new FormControl('')
   });
+
   users$: Observable<GithubUser[]>;
   searchString: string = '';
   pageNum: number = 1;
@@ -33,12 +35,17 @@ export class GithubUsersComponent implements OnInit {
     this.githubUsers.load(this.pageNum, this.pageSize);
   }
 
-  search() {
+  searchByLogin() {
     if (this.searchString && this.searchString !== '') {
       this.users$ = this.users$.pipe(
         map((users: GithubUser[]) =>
           users.filter(u => u.login.toLocaleLowerCase().match(this.searchString.toLocaleLowerCase()))
         ));
     }
+  }
+
+  onSubmit() {
+    console.log(this.filterForm.value)
+    console.log(this.filterForm.controls['login'].value)
   }
 }
