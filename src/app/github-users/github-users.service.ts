@@ -21,6 +21,10 @@ export class GithubUsersService {
     return this.users$;
   }
 
+  onSubmit(): Observable<any> {
+    return this.http.post(this.API_URL) 
+  }
+
   load(pageNum: number = 0, pageSize: number = 10) {
     this.http.get<GithubUser[]>(this.API_URL, {
       params: {'_page': pageNum, '_limit': pageSize}

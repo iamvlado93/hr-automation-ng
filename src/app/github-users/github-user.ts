@@ -13,3 +13,15 @@ export class GithubUser {
         this.stack = stack;
     }
 }
+
+export class SubmitForm {
+    login: string;
+    stack: string;
+    location: string;
+
+    constructor(login: string, stack: string, location: string) {
+        this.login = login;
+        this.location = location;
+        this.stack = stack;
+    }
+} 

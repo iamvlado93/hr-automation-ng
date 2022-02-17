@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { GithubUser } from './github-user';
+import { GithubUser, SubmitForm } from './github-user';
 import { GithubUsersService } from './github-users.service';
-import { FormGroup, FormControl } from '@angular/forms';
-import { Validators } from '@angular/forms'
-import { map, Observable} from "rxjs";
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { debounceTime, map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-github-users',
@@ -12,12 +11,13 @@ import { map, Observable} from "rxjs";
 })
 export class GithubUsersComponent implements OnInit {
   filterForm = new FormGroup({
-    login: new FormControl('', Validators.required),
-    stack: new FormControl(''),
-    location: new FormControl('')
+    login: new FormControl('', [Validators.required]),
+    stack: new FormControl('', [Validators.required]),
+    location: new FormControl('', [Validators.required])
   });
-
+  
   users$: Observable<GithubUser[]>;
+  form$: Observable<SubmitForm[]>;
   searchString: string = '';
   pageNum: number = 1;
   pageSize: number = 10;
@@ -27,8 +27,15 @@ export class GithubUsersComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.githubUsers.load(this.pageNum, this.pageSize);
+    this.filterForm.valueChanges
+      .pipe(
+        debounceTime(500))
+        .subscribe((value) => value);
   }
+
+  // onSubmit() {
+  //  console.log(this.filterForm.value)
+  // }
 
   loadMore() {
     this.pageNum += 1;
@@ -42,10 +49,5 @@ export class GithubUsersComponent implements OnInit {
           users.filter(u => u.login.toLocaleLowerCase().match(this.searchString.toLocaleLowerCase()))
         ));
     }
-  }
-
-  onSubmit() {
-    console.log(this.filterForm.value)
-    console.log(this.filterForm.controls['login'].value)
   }
 }
