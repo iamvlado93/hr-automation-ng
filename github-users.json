@@ -1,0 +1,242 @@
+{
+    "github-users": [
+        {
+            "login": "nostra13",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1223348?v=4",
+            "html_url": "https://github.com/nostra13",
+            "location": "Kyiv",
+            "stack": "React"
+        },
+        
+        {
+            "login": "kirich1409",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2403657?v=4",
+            "html_url": "https://github.com/kirich1409",
+            "location": "Kyiv",
+            "stack": "React"
+        },
+
+        {
+            "login": "DmitryMalkovich",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2931932?v=4",
+            "html_url": "https://github.com/DmitryMalkovich",
+            "location": "Minsk",
+            "stack": "React"
+        },
+
+        {
+            "login": "VEINHORN",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3595400?v=4",
+            "html_url": "https://github.com/VEINHORN",
+            "location": "Kyiv",
+            "stack": "React"
+        },
+
+        {
+            "login": "Cvazer",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5880448?v=4",
+            "html_url": "https://github.com/Cvazer",
+            "location": "Minsk",
+            "stack": "React"
+        },
+
+        {
+            "login": "arturdryomov",
+            "avatar_url": "https://avatars.githubusercontent.com/u/200401?v=4",
+            "html_url": "https://github.com/arturdryomov",
+            "location": "Minsk",
+            "stack": "React"
+        },
+
+        {
+            "login": "vitalliuss",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1186063?v=4",
+            "html_url": "https://github.com/vitalliuss",
+            "location": "Minsk",
+            "stack": "React"
+        },
+
+        {
+            "login": "KostyaSha",
+            "avatar_url": "https://avatars.githubusercontent.com/u/231611?v=4",
+            "html_url": "https://github.com/KostyaSha",
+            "location": "Kyiv",
+            "stack": "React"
+        },
+
+        {
+            "login": "Wladislaw28",
+            "avatar_url": "https://avatars.githubusercontent.com/u/40837008?v=4",
+            "html_url": "https://github.com/Wladislaw28",
+            "location": "Kyiv",
+            "stack": "React"
+        },
+
+        {
+            "login": "Bulbash3r",
+            "avatar_url": "https://avatars.githubusercontent.com/u/23174540?v=4",
+            "html_url": "https://github.com/Bulbash3r",
+            "location": "Moscow",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "michail-nikolaev",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2277142?v=4",
+            "html_url": "https://github.com/michail-nikolaev",
+            "location": "Moscow",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "Develer12",
+            "avatar_url": "https://avatars.githubusercontent.com/u/43027930?v=4",
+            "html_url": "https://github.com/Develer12",
+            "location": "Moscow",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "askomar",
+            "avatar_url": "https://avatars.githubusercontent.com/u/44285120?v=4",
+            "html_url": "https://github.com/askomar",
+            "location": "Minsk"
+        },
+
+        {
+            "login": "vlsidlyarevich",
+            "avatar_url": "https://avatars.githubusercontent.com/u/16256669?v=4",
+            "html_url": "https://github.com/vlsidlyarevich",
+            "location": "Minsk",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "NasterVill",
+            "avatar_url": "https://avatars.githubusercontent.com/u/37075956?v=4",
+            "html_url": "https://github.com/NasterVill",
+            "location": "Tallin",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "spanickroon",
+            "avatar_url": "https://avatars.githubusercontent.com/u/37241257?v=4",
+            "html_url": "https://github.com/spanickroon",
+            "location": "Tallin",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "aliesbelik",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1752374?v=4",
+            "html_url": "https://github.com/aliesbelik",
+            "location": "Tallin",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "krossovochkin",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1792204?v=4",
+            "html_url": "https://github.com/krossovochkin",
+            "location": "Krakow",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "gleb-kosteiko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/15192983?v=4",
+            "html_url": "https://github.com/gleb-kosteiko",
+            "location": "Krakow",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "y-harkavik",
+            "avatar_url": "https://avatars.githubusercontent.com/u/25123387?v=4",
+            "html_url": "https://github.com/y-harkavik",
+            "location": "Krakow",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "VadzimPapko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3023032?v=4",
+            "html_url": "https://github.com/VadzimPapko",
+            "location": "Krakow",
+            "stack": "Vue"
+        },
+
+        {
+            "login": "rosolko",
+            "avatar_url": "https://avatars.githubusercontent.com/u/11458319?v=4",
+            "html_url": "https://github.com/rosolko",
+            "location": "Krakow",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "Nice3point",
+            "avatar_url": "https://avatars.githubusercontent.com/u/20504884?v=4",
+            "html_url": "https://github.com/Nice3point",
+            "location": "Krakow",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "drakulavich",
+            "avatar_url": "https://avatars.githubusercontent.com/u/129260?v=4",
+            "html_url": "https://github.com/drakulavich",
+            "location": "Krakow",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "ksereda",
+            "avatar_url": "https://avatars.githubusercontent.com/u/26517740?v=4",
+            "html_url": "https://github.com/ksereda",
+            "location": "Krakow",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "ziginsider",
+            "avatar_url": "https://avatars.githubusercontent.com/u/58727?v=4",
+            "html_url": "https://github.com/ziginsider",
+            "location": "Krakow",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "makarsky",
+            "avatar_url": "https://avatars.githubusercontent.com/u/22708426?v=4",
+            "html_url": "https://github.com/makarsky",
+            "location": "Krakow",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "aliakh",
+            "avatar_url": "https://avatars.githubusercontent.com/u/663270?v=4",
+            "html_url": "https://github.com/aliakh",
+            "location": "Krakow",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "Gabriellji",
+            "avatar_url": "https://avatars.githubusercontent.com/u/3023032?v=4",
+            "html_url": "https://github.com/Gabriellji",
+            "location": "Minsk",
+            "stack": "Angular"
+        },
+
+        {
+            "login": "avarabyeu",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1565439?v=4",
+            "html_url": "https://github.com/avarabyeu",
+            "location": "Kyiv",
+            "stack": "Angular"
+        }
+    ]
+}

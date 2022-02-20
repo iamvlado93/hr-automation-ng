@@ -103,9 +103,22 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "hr-automation"
+  "defaultProject": "hr-automation",
+  "cli": {
+    "analytics": "c062b3b4-4bfd-4285-9c72-7bb2e4a21410",
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

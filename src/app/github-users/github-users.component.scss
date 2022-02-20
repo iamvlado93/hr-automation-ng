@@ -1,0 +1,106 @@
+h2 {
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+h4 {
+    margin: 0;
+}
+
+label {
+    color: white;
+}
+
+.main {
+   display: flex;
+   flex-direction: row;
+   margin: 0 auto;
+   &__sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 300px;
+    box-shadow: 4px 4px 30px -8px rgba(0, 0, 0, 0.53);
+   }
+   &__output {
+    display: flex;
+    flex-direction: column;
+    &__header {
+        width: 100%;
+        text-align: center;
+        box-shadow: 4px 4px 30px -8px rgba(0, 0, 0, 0.53);
+    }
+    &__users {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }   
+   }
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 0.3rem 0.3rem;
+  margin: 0.3rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  outline: none;
+}
+
+ul {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 12rem;
+    margin: 0.3rem;
+    padding: 0.2rem;
+    list-style-type: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 15px -4px rgba(255, 255, 255, 0.53);
+}
+
+ul li:hover {
+    transition: 0.6s ease-in-out;
+    transform: scale(1.05);
+}
+
+ul li h3 {
+    margin: 0;
+}
+
+ul li img {
+    width: 3rem;
+    height: 3rem;
+}
+
+button {
+    margin: 0.5rem;
+}
